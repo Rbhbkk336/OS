@@ -20,7 +20,7 @@ void search_files(const char *dirname, long min_size, long max_size, FILE *outpu
       }
       
       char path[1024];
-      snprintf(path, sizeof(path), "%s/%s", dirname, entry->d_name);
+      sprintf(path, "%s/%s", dirname, entry->d_name);
       
       struct stat st;
       if (stat(path, &st) == 0) {
